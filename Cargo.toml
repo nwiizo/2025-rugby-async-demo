@@ -1,0 +1,32 @@
+[package]
+name = "blog-code-test"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85.0"  # Rust 2024 edition requires 1.85+
+authors = ["Rugby Async Demo Team"]
+description = "非同期プログラミングとラグビー戦術の類似性を示すデモ"
+keywords = ["async", "rugby", "demo", "education"]
+categories = ["asynchronous"]
+
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+# Rust 2024 edition最適化設定
+[profile.dev]
+# 開発時のコンパイル速度向上
+opt-level = 0
+
+[profile.release]
+# リリースビルドの最適化
+opt-level = 3
+lto = true
+codegen-units = 1
+
+# ドキュメント生成設定
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
