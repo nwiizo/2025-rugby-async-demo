@@ -35,11 +35,32 @@
 git clone https://github.com/nwiizo/2025-rugby-async-demo.git
 cd 2025-rugby-async-demo
 
-# メインのデモを実行
+# メインのデモを実行（基本的な非同期処理）
 cargo run
 
-# 高度な例を実行
+# 高度な例を実行（Rust 2024の機能フル活用）
 cargo run --example modern_rugby_2024
+
+# 複雑なゲームシミュレーション（多数の変数を考慮）
+cargo run --example complex_game_simulation
+```
+
+### 利用可能なサンプル
+
+1. **基本デモ** (`cargo run`):
+   - スタンドオフの基本的な判断プロセス
+   - 並行処理の基礎
+
+2. **高度な例** (`modern_rugby_2024`):
+   - カスタムエラー型
+   - 明示的な型定義（Direction, Decision等）
+   - Rust 2024のベストプラクティス
+
+3. **複雑なシミュレーション** (`complex_game_simulation`):
+   - **10以上の変数を考慮** した現実的な意思決定
+   - 試合時間、スコア差、フィールドポジション、天候、疲労度等
+   - 7つの主要シナリオ分析
+   - リスク評価とバランス判断
 ```
 
 ### 期待される出力
